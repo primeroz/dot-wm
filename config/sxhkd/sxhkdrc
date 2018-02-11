@@ -1,0 +1,57 @@
+shift + alt + {h,j,k,l}
+        waitron window_move {-20 0, 0 20, 0 -20, 20 0}
+
+ctrl + alt + {h,j,k,l}
+        waitron window_resize {-20 0, 0 20, 0 -20, 20 0}
+
+#alt + shift + {h,j,k,l}
+#        waitron window_move {-50 0, 0 50, 0 -50, 50 0}
+#
+#ctrl + shift + alt + {h,j,k,l}
+#        waitron window_resize {-50 0, 0 50, 0 -50, 50 0}
+
+alt + {h,j,k,l}
+        waitron window_cardinal_focus {left,down,up,right}
+
+shift + alt + Escape
+        waitron wm_quit 0
+
+alt + f
+        waitron window_maximize
+
+alt + w
+        waitron window_close
+
+alt + b
+        waitron window_hor_maximize
+
+alt + v
+        waitron window_ver_maximize
+
+alt + m
+        waitron window_monocle
+
+alt + Tab
+        waitron window_cycle
+
+alt + shift + Tab
+        waitron window_rev_cycle
+
+alt + ctrl + Tab
+        waitron window_focus_last
+
+alt + {_,shift +}{1-9}
+        waitron {group_toggle,group_add_window} {1-9}
+
+alt + ctrl + r
+        waitron group_remove_window
+
+shift + alt + ctrl + {1-4}
+        waitron group_remove_all_windows {1-4}
+
+alt + Return
+        xterm
+
+alt + {Insert,Prior,Delete,Next,End}
+        waitron window_snap {topleft,topright,bottomleft,bottomright,middle}
+
