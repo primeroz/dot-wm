@@ -1,31 +1,31 @@
-super + {h,j,k,l}
+shift + alt + {h,j,k,l}
 	waitron window_move {-20 0, 0 20, 0 -20, 20 0}
 
-super + alt + {h,j,k,l}
+shift + ctrl + alt + {h,j,k,l}
 	waitron window_resize {-20 0, 0 20, 0 -20, 20 0}
 
-super + shift + {h,j,k,l}
-	waitron window_move {-50 0, 0 50, 0 -50, 50 0}
+#super + shift + {h,j,k,l}
+#	waitron window_move {-50 0, 0 50, 0 -50, 50 0}
+#
+#super + shift + alt + {h,j,k,l}
+#	waitron window_resize {-50 0, 0 50, 0 -50, 50 0}
 
-super + shift + alt + {h,j,k,l}
-	waitron window_resize {-50 0, 0 50, 0 -50, 50 0}
-
-super + alt + Escape
+ctrl + alt + Escape
 	waitron wm_quit 0
 
-super + f
+alt + f
 	waitron window_maximize
 
-super + m
+alt + m
 	waitron window_monocle
 
-super + w
+alt + w
 	waitron window_close
 
-super + b
+alt + b
 	waitron window_hor_maximize
 
-super + v
+alt + v
 	waitron window_ver_maximize
 
 alt + Tab
@@ -34,31 +34,41 @@ alt + Tab
 alt + shift + Tab
 	waitron window_rev_cycle
 
-super + {_,shift +}{1-8}
+alt + {_,shift +}{1-8}
 	waitron {group_toggle,group_add_window} {1-8}
 
-super + r
+alt + r
 	waitron group_remove_window
 
-super + {Insert,Prior,Delete,Next,End}
+alt + {Insert,Prior,Delete,Next,End}
 	waitron window_snap {topleft,topright,bottomleft,bottomright,middle}
 
-super + t
+alt + t
 	GAP=0 tilew
 
 alt + {h,j,k,l}
 	waitron window_cardinal_focus {left,down,up,right}
 
-super + shift + t
+alt + shift + t
 	tilew
 
-super + shift + r
+alt + shift + r
 	$HOME/.config/windowchef/windowchefrc
 
-super + @space
-  rofi
+#super + @space
+  #rofi
 
-alt + enter
+alt + space
+    rofi -show combi -switchers combi -combi-modi window,run,ssh \
+    -terminal termite \
+    -font "Input Mono 9" -color-enabled \
+    -color-window "#34322e,#a3a6ab" \
+    -color-normal "#34322e,#a3a6ab,#2a2a2a,#58c5f1,#343223" \
+    -color-urgent "#94322e,#a3a6ab,#94322e,#58c5f1,#343223" \
+    -color-active "#555555,#a3a6ab,#555555,#28aaff,#343223"
+#             'bg',    'fg',   'bgalt','hlbg', 'hlfg'
+
+alt + Return
   terminator
 
 ~button3
