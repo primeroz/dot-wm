@@ -4,12 +4,6 @@ shift + alt + {h,j,k,l}
 ctrl + alt + {h,j,k,l}
         waitron window_resize {-20 0, 0 20, 0 -20, 20 0}
 
-#alt + shift + {h,j,k,l}
-#        waitron window_move {-50 0, 0 50, 0 -50, 50 0}
-#
-#ctrl + shift + alt + {h,j,k,l}
-#        waitron window_resize {-50 0, 0 50, 0 -50, 50 0}
-
 alt + {h,j,k,l}
         waitron window_cardinal_focus {left,down,up,right}
 
